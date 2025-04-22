@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Giriş / Kayıt Ol</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <img src="alfinex-logo.png" alt="Alfinex Logo" class="logo" />
+    <div class="tabs">
+      <button id="login-tab" class="active" onclick="showLogin()">Giriş Yap</button>
+      <button id="register-tab" onclick="showRegister()">Kayıt Ol</button>
+    </div>
+
+    <div id="login-form" class="form-box">
+      <input type="text" placeholder="Kullanıcı Adı veya E-posta">
+      <input type="password" placeholder="Şifre">
+      <button>Giriş Yap</button>
+    </div>
+
+    <div id="register-form" class="form-box hidden">
+      <input type="text" placeholder="Ad Soyad">
+      <input type="text" placeholder="Kullanıcı Adı">
+      <input type="email" placeholder="E-posta">
+      <input type="password" placeholder="Şifre">
+      <button>Kayıt Ol</button>
+    </div>
+  </div>
+
+  <script>
+    function showLogin() {
+      document.getElementById("login-form").classList.remove("hidden");
+      document.getElementById("register-form").classList.add("hidden");
+      document.getElementById("login-tab").classList.add("active");
+      document.getElementById("register-tab").classList.remove("active");
+    }
+    function showRegister() {
+      document.getElementById("login-form").classList.add("hidden");
+      document.getElementById("register-form").classList.remove("hidden");
+      document.getElementById("login-tab").classList.remove("active");
+      document.getElementById("register-tab").classList.add("active");
+    }
+  </script>
+</body>
+</html>
