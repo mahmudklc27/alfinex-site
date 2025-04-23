@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Yatır</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="yatir-style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Alfinex</h1>
+    <h2>USDT ile Yatırım Yap</h2>
+
+    <div class="qr-box">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=TRQXD6YpBvG4CwSJBTsN67kFenAeVyEHPA&size=150x150" alt="QR Kodu">
+    </div>
+
+    <div class="info-box">
+      <p><strong>Ağ:</strong> TRC20</p>
+      <p><strong>Cüzdan Adresi:</strong></p>
+      <div class="wallet-line">
+        <input type="text" id="wallet" value="TRQXD6YpBvG4CwSJBTsN67kFenAeVyEHPA" readonly>
+        <button onclick="copyWallet()">Kopyala</button>
+      </div>
+      <p class="copy-alert" id="copy-alert" style="display:none;">Kopyalandı!</p>
+    </div>
+
+    <p class="min">Minimum yatırım tutarı: <strong>50 USDT</strong></p>
+    <p class="note">Gönderimden sonra sistemde görünmesi 5 dakika sürebilir.</p>
+  </div>
+
+  <script>
+    function copyWallet() {
+      var copyText = document.getElementById("wallet");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+
+      var alertBox = document.getElementById("copy-alert");
+      alertBox.style.display = "block";
+      setTimeout(() => {
+        alertBox.style.display = "none";
+      }, 1500);
+    }
+  </script>
+</body>
+</html>

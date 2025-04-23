@@ -1,0 +1,67 @@
+
+body {
+  background: #0b0f1a;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1rem;
+}
+.container {
+  max-width: 480px;
+  margin: auto;
+}
+h1 {
+  color: #fbbd08;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.qr-box {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+.info-box {
+  background: #1c1f2a;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.wallet-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.wallet-line input {
+  flex: 1;
+  background: #10141f;
+  border: none;
+  color: #fbbd08;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.wallet-line button {
+  background: #fbbd08;
+  border: none;
+  color: black;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.copy-alert {
+  color: #00c853;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+.min {
+  margin-top: 2rem;
+  text-align: center;
+}
+.note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #aaa;
+}
